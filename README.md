@@ -1,16 +1,20 @@
-# PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES AY 23-24
-<h3>NAME: SAILESHKUMAR A </h3>
+# PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES AY 
+
+## Date:15.10.2025
+<h3>NAME: SAILESHKUMAR A</h3>
 <h3>REGISTER NO:212222230126</h3>
-<h3>EX. NO:03</h3>
-<h3>DATE: 28-10-2025</h3>
+
+<h3>EX.NO:03</h3>
 <h1> <align=center> PARALLEL REDUCTION USING UNROLLING TECHNIQUES </h3>
   Refer to the kernel reduceUnrolling8 and implement the kernel reduceUnrolling16, in which each thread handles 16 data blocks. Compare kernel performance with reduceUnrolling8 and use the proper metrics and events with nvprof to explain any difference in performance.</h3>
 
 ## AIM:
 To implement the kernel reduceUnrolling16 and comapare the performance of kernal reduceUnrolling16 with kernal reduceUnrolling8 using nvprof.
+
 ## EQUIPMENTS REQUIRED:
 Hardware – PCs with NVIDIA GPU & CUDA NVCC
 Google Colab with NVCC Compiler
+
 ## PROCEDURE:
 1.	Initialization and Memory Allocation
 2.	Define the input size n.
@@ -49,11 +53,14 @@ Memory Deallocation
 28.	Return from the main function.
 
 ## PROGRAM:
-```
-Name : SAILESHKUMAR A
-Reg No: 212222230126
-```
-```py
+Developed by : SAILESHKUMAR A 212222230126
+~~~
+
+
+
+!pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
+%load_ext nvcc4jupyter
+
 %%cuda
 #include <stdio.h>
 #include <cuda_runtime.h>
@@ -378,10 +385,12 @@ int main(int argc, char **argv)
     return EXIT_SUCCESS;
 }
 
-```
+
+~~~
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/25d500e5-eb87-4ab4-907e-d3a59c786113)
+<img width="1645" height="165" alt="image" src="https://github.com/user-attachments/assets/6ecad20b-91c9-45de-893b-8161be674958" />
+
 
 ## RESULT:
-Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that  1048576 has executed with less elapsed time than 1048576 with blocks 2.73 ms,116.58 ms.
+Thus the program has been executed by unrolling by 8 and unrolling by 16. It is observed that GPU Unrolling has executed with less elapsed time than GPU Unrolling16 with blocks 2048,512.
